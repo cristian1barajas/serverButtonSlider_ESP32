@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range Slider</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="slider-container">
+        <div class="button-container">
+            <p>GPIO state: <strong id="gpioValue">%STATE%</strong></p>
+            <a href="#" onclick="toogleButtonOn()" value="1">ON</a>
+            <a href="#" onclick="toogleButtonOff()" value="0">OFF</a>
+        </div>
+        <div>
+            <span class="myRange" id="rangeValue">%SLIDERVALUE%</span>
+            <input id="pwmSlider" class="range" type="range" name="" value="%SLIDERVALUE%" min="0" max="255" step="1" onChange="rangeSlide(this.value)">
+        </div>
+        <div>
+            <span class="myRange2" id="rangeValue2">%SLIDERVALUE%</span>
+            <input id="pwmSlider2" class="range" type="range" name="" value="%SLIDERVALUE%" min="0" max="255" step="1" onChange="rangeSlide2(this.value)">
+        </div>
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
